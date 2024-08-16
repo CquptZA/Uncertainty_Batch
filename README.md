@@ -8,4 +8,4 @@ pytorch==1.11.0
 numpy== 1.21.5
 
 # Usage
- run Uncertain.ipy be cell
+ run UncertainBatch.ipynb be cell

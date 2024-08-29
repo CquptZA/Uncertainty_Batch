@@ -7,7 +7,7 @@ skmultilearn==1.2.1
 pytorch==1.11.0 
 numpy== 1.21.5
 
-# Usage
+# Usage:
 
 ## run UncertainBatch.ipynb cell by cell
    
@@ -105,5 +105,11 @@ Update the selection weight w through E
 
 
 
-# Comparison method 
+# Comparison method:
 ## analyse.ipynb includes all comparison methods,You can run the corresponding cell to obtain the results
+
+# Acknowledgement and Citation:
+This paper is still under review.
+
+# Contact:
+If you have any questions or suggestions, feel free to contact me: zacqupt@gmail.com.

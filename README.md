@@ -20,10 +20,10 @@ give the label count of corresponding dataset: label_counts = [6, 6,14,374,101,1
 give the feature retention ratio of the corresponding: dataset=select_feature=[1,1,1,1,0.02,0.02,0.02,0.05,0.05,1,0.01,1,1,1]
 
 The warm epoch is set to 10 by default.
-
 $$
 E[\text{idx}, j] = \frac{1}{2} \times \text{mean\_diffs} + \frac{1}{2} \times \text{current\_entropy}, \quad \text{where } \lambda_{1} = \lambda_{2} = \frac{1}{2}
 $$
+
 
 
 

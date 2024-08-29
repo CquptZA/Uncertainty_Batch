@@ -31,7 +31,7 @@ $$
 ## key code:
 
 
-\textbf{def update_H(H, y_pred, ids, max_history_length=5):}
+### 1. def update_H(H, y_pred, ids, max_history_length=5):
 
     y_pred_numpy = y_pred.detach().cpu().numpy() 
     
@@ -48,7 +48,7 @@ $$
 max_history_length is the size of the sliding window, H is a queue used to store the latest sliding window size predictions
 
 
-def update_E(H, E, ids, label_dim):
+### 2. def update_E(H, E, ids, label_dim):
 
     for idx in ids:
     
@@ -73,7 +73,7 @@ def update_E(H, E, ids, label_dim):
     
 E is a two-dimensional array of n (number of samples) * q (number of labels), which updates the uncertainty of each sample and label in current epoch.
 
-def update_U(E, U, epoch):
+### 3. def update_U(E, U, epoch):
 
     E[E > 1] = 1
     
@@ -101,8 +101,9 @@ def update_U(E, U, epoch):
     
     return w
 
+Update the selection weight w through E
 
 
 
-
+# Comparison method 
 ## analyse.ipynb includes all comparison methods,You can run the corresponding cell to obtain the results

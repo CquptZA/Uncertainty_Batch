@@ -22,7 +22,7 @@ give the feature retention ratio of the corresponding: dataset=select_feature=[1
 The warm epoch is set to 10 by default.
 
 $$
-E[idx, j] = \frac{1}{2} \times mean\_diffs + \frac{1}{2} \times current\_entropy, \quad \lambda_{1} = \lambda_{2} = \frac{1}{2}
+E[idx, j] = \frac{1}{2} \times meandiffs + \frac{1}{2} \times currententropy, \quad where \lambda_{1} = \lambda_{2} = \frac{1}{2}
 $$
 
 

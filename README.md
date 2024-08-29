@@ -31,40 +31,68 @@ $$
 ## key code:
 
 def update_H(H, y_pred, ids, max_history_length=5):
+
     y_pred_numpy = y_pred.detach().cpu().numpy()
+    
     for i, idx in enumerate(ids):
+    
         if idx not in H:
+        
             H[idx] = deque(maxlen=max_history_length) 
+            
         H[idx].append(y_pred_numpy[i])  
+        
     return H
 
 def update_E(H, E, ids, label_dim):
+
     for idx in ids:
+    
         current_predictions_history = np.array(H[idx])
+        
         last_row_index = len(current_predictions_history) - 1
+        
         for j in range(label_dim): 
+        
             diffs = np.abs(np.diff(current_predictions_history[:, j]))
+            
             mean_diffs = np.sum(diffs)/len(diffs)
+            
             current_entropy = -1 / np.log(2) * (
                 current_predictions_history[last_row_index][j] * np.log(current_predictions_history[last_row_index][j]) 
                 + (1 - current_predictions_history[last_row_index][j]) * np.log(1 - current_predictions_history[last_row_index][j])
             )
+            
             E[idx,j] = 1/2 * mean_diffs + 1/2 * current_entropy
+            
     return E
 
 def update_U(E, U, epoch):
+
     E[E > 1] = 1
+    
     if epoch >= 5:
+    
         bins = np.array([0, 0.2, 0.4, 0.6, 0.8, 1.0])
+        
         discrete_values = np.array([0.1, 0.3, 0.5, 0.7, 0.9])
+        
         indices = np.digitize(E, bins) - 1
+        
         indices = np.clip(indices, 0, len(discrete_values) - 1)
+        
         E = discrete_values[indices]
+        
     else:
+    
         I = np.ones((E.shape[1], E.shape[1]))
+        
     I = np.ones((E.shape[1], E.shape[1]))
+    
     U = np.dot(E, I)
+    
     w = np.sum(U, axis=1)
+    
     return w
 
 

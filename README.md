@@ -21,10 +21,10 @@ give the feature retention ratio of the corresponding: dataset=select_feature=[1
 
 The warm epoch is set to 10 by default.
 
-
 $$
 E[\text{idx}, j] = \frac{1}{2} \times \text{mean\_diffs} + \frac{1}{2} \times \text{current\_entropy}, \quad \text{where } \lambda_{1} = \lambda_{2} = \frac{1}{2}
 $$
+
 
 
 ## analyse.ipynb includes all comparison methods,You can run the corresponding cell to obtain the results

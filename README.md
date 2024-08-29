@@ -31,12 +31,18 @@ $$
 ## key code:
 
 
-def update_H(H, y_pred, ids, max_history_length=5):
-    y_pred_numpy = y_pred.detach().cpu().numpy()  
+\textbf{def update_H(H, y_pred, ids, max_history_length=5):}
+
+    y_pred_numpy = y_pred.detach().cpu().numpy() 
+    
     for i, idx in enumerate(ids):
+    
         if idx not in H:
+        
             H[idx] = deque(maxlen=max_history_length) 
+            
         H[idx].append(y_pred_numpy[i])   
+        
     return H
 
 max_history_length is the size of the sliding window, H is a queue used to store the latest sliding window size predictions

@@ -106,7 +106,7 @@ Update the selection weight w through E
 
 
 # Comparison method:
-## analyse.ipynb includes all comparison methods,You can run the corresponding cell to obtain the results
+ analyse.ipynb includes all comparison methods,You can run the corresponding cell to obtain the results
 
 # Acknowledgement and Citation:
 This paper is still under review.

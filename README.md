@@ -25,7 +25,7 @@ label_counts = [6, 6,14,374,101,101,101,28,25,159,22,53,174,75]
 
 select_feature=[1,1,1,1,0.02,0.02,0.02,0.05,0.05,1,0.01,1,1,1]
 
-#### The warm epoch is set to 10 y default.
+#### The warm epoch is set to 5 by default.
 
 #### For $$\lambda_{1}$$ default:
 

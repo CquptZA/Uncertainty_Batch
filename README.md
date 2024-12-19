@@ -21,10 +21,10 @@ give the feature retention ratio of the corresponding dataset: select_feature=[1
 
 The warm epoch is set to 10 by default.
 
-For $$\lambda_{1}$$ and $$\lambda_{2}$$ default:
+For $$\lambda_{1}$$ default:
 
 $$
-E[idx, j] = \frac{1}{2} \times meandiffs + \frac{1}{2} \times currententropy, \quad where \quad \lambda_{1} = \lambda_{2} = \frac{1}{2}
+E[idx, j] = \frac{1}{2} \times meandiffs + \frac{1}{2} \times currententropy, \quad where \quad \lambda_{1} = \frac{1}{2}
 $$
 
 
@@ -109,7 +109,7 @@ Update the selection weight w through E
  analyse.ipynb includes all comparison methods,You can run the corresponding cell to obtain the results
 
 # Acknowledgement and Citation:
-This paper is still under review.
+We are pleased that this paper has been accepted by AAAI2025 and will update it after its official publication
 
 # Contact:
 If you have any questions or suggestions, feel free to contact me: zacqupt@gmail.com.
